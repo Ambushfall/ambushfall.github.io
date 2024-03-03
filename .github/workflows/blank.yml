@@ -24,8 +24,8 @@ jobs:
       - name: Modifiy the specific files using scripts
         shell: bash
         run: |
-          chmod +x ./public/scripts/test.sh
-          ./public/scripts/test.sh
+          chmod +x ./test.sh
+          ./test.sh
          
       - name: Commit and push changes
         run: |
