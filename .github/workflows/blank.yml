@@ -10,9 +10,9 @@ permissions:
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,11 +30,9 @@ jobs:
         run: |
           chmod +x ./test.sh
           ./test.sh
-         
+
       - name: Commit and push changes
-        run: |
-          git config --global user.name "ambushfall"
-          git config --global user.email "lukathetormentor@gmail.com"
-          git add -A
-          git commit -m "Automated index generation"
-          git push
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: Generated page.
