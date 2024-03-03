@@ -40,6 +40,9 @@ uriencode() {
     printf %s "$s"
 }
 
+cd ..
+cd public
+
 cat >test.html <<EOF
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +50,7 @@ cat >test.html <<EOF
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Controller Gallery</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
 
   <body>
