@@ -28,8 +28,8 @@ jobs:
       - name: Modifiy the specific files using scripts
         shell: bash
         run: |
-          chmod +x .build/test.sh
-          .build/test.sh
+          chmod +x ./build/test.sh
+          ./build/test.sh
 
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@master
