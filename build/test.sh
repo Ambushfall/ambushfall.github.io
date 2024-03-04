@@ -59,9 +59,8 @@ cat >./docs/index.html <<EOF
         <div class="gallery-container">
 EOF
 
-for d in ./*/; do
+for CSS_FileName in ./*/*.*ss; do
 
-    CSS_FileName=$(find "$d" -name '*.*ss')
     args=${CSS_FileName:1}
 
     if [[ ${#args} == 0 ]]; then
