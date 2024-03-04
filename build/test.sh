@@ -41,7 +41,7 @@ uriencode() {
 }
 
 
-cat >./public/test.html <<EOF
+cat >./docs/test.html <<EOF
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -108,7 +108,7 @@ for d in ./*/; do
         Encoded_Component=$(uriencode "$args")
         # https://Wolflexx.github.io/$CSS_FileName
 
-        cat >>./public/test.html <<EOF
+        cat >>./docs/test.html <<EOF
         <div class="gallery-item" >
         <iframe loading="lazy" src="https://gamepadviewer.com/?p=1&s=$controller&editcss=https://Wolflexx.github.io$Encoded_Component"></iframe>
         </div>
@@ -126,7 +126,7 @@ done
 #            <iframe src="https://gamepadviewer.com/?p=1&s=5"></iframe>
 #          </div>
 
-cat >>./public/test.html <<EOF
+cat >>./docs/test.html <<EOF
 <p>Check Out All Controllers Here</p>
           <!-- Add more gallery items as needed -->
         </div>
